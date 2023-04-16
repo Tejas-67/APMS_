@@ -2,9 +2,9 @@
     <string name="app_name">APMS</string>
     <string name="sign_in_with_google">Sign in With Google</string>
     <string name="example">Example</string>
-    <string name="id">ID</string>
-    <string name="name">Name</string>
-    <string name="email_address">Email address</string>
+    <string name="id">ID:</string>
+    <string name="name">Name:</string>
+    <string name="email_address">Gmail:</string>
     <string name="sign_out">Sign out</string>
     <string name="title_activity_read_data">ReadData</string>
     <string name="prompt_email">Email</string>
@@ -22,4 +22,5 @@
     <string name="temp"> °C</string>
     <string name="humid">%</string>
     <string name="ppm">ppm</string>
+    <string name="enter_location">Enter Location</string>
 </resources>

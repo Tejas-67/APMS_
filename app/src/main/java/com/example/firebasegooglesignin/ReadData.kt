@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.firebasegooglesignin.databinding.ActivityReadDataBinding
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 
 class ReadData : AppCompatActivity() {
 
@@ -33,24 +32,48 @@ class ReadData : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun readData(showGraph: String) {
-        database = FirebaseDatabase.getInstance().getReference("User")
-        database.child(showGraph).get().addOnSuccessListener{
+        database = FirebaseDatabase.getInstance().getReference("Users").child(showGraph)
+
+//        database.orderByKey().limitToFirst(1).addListenerForSingleValueEvent(object : ValueEventListener{
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if(snapshot.exists()){
+//                    val firstChild=snapshot.children.first()
+//                    Log.w("APMS", firstChild.value.toString())
+//
+//                    updateAllViews(data)
+//                }
+//                else {
+//                    Toast.makeText(this@ReadData, "Couldnt fetch data!", Toast.LENGTH_SHORT).show()
+//
+//                }
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                Log.w("APMS", "Cancelled")
+//            }
+//
+//        })
+
+        //TODO implement this part such that it fetches the first child detail....
+
+        database.child("Time").get().addOnSuccessListener{
 
             if (it.exists()){
 
-                val latitude = it.child("latitude").value
-                val longitude = it.child("longitude").value
-                val temp = it.child("temp").value
-                val humidity = it.child("humidity").value
-                val co2 = it.child("co2").value
-                val co = it.child("co").value
-                val so2 = it.child("so2").value
-                val no2 = it.child("no2").value
-                val methane = it.child("methane").value
-                val o3 = it.child("o3").value
+                val latitude = it.child("Latitude").value
+                val longitude = it.child("Longitude").value
+                val temp = it.child("Temperature").value
+                val humidity = it.child("Humidity").value
+                val co2 = it.child("CO2").value
+                val co = it.child("CO").value
+                val so2 = it.child("SO2").value
+                val no2 = it.child("NO2").value
+                val methane = it.child("Methane").value
+                val o3 = it.child("O3").value
 
 
-                binding.etusername.text.clear()
+                binding.etusername.text?.clear()
+
                 binding.lat.text = latitude.toString()+" °"
                 binding.longi.text = longitude.toString()+" °"
                 binding.temp.text = temp.toString()+" °C"
@@ -72,4 +95,6 @@ class ReadData : AppCompatActivity() {
 
         }
     }
+
+
 }
