@@ -32,11 +32,12 @@
         android:layout_marginTop="20dp"
         android:hint="@string/enter_location"
         android:layout_height="wrap_content"
-        style="@style/TextInputLayoutStyle"
         app:layout_constraintBottom_toTopOf="@+id/readdataBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@null">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -47,10 +48,11 @@
 
     <Button
         android:id="@+id/readdataBtn"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="124dp"
+        android:padding="20sp"
         android:background="@drawable/rounded_rectangle"
         android:text="Get Data"
         android:textAlignment="center"

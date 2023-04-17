@@ -24,7 +24,7 @@ class ProfileActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
 
-        binding.idTxt.text = currentUser?.uid
+        binding.idTxt.text =currentUser?.uid
         binding.nameTxt.text = currentUser?.displayName
         binding.emailTxt.text = currentUser?.email
 
