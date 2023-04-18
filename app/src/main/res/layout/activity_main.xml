@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,29 +8,71 @@
     tools:context=".MainActivity"
     android:background="@drawable/common_background">
 
-    <ImageView
-        android:id="@+id/iconIv"
-        android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:src="@drawable/ic_welcome"
-        android:layout_centerHorizontal="true"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/iconIv"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:src="@drawable/ic_welcome"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="220dp"
+        android:layout_height="386dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/apms_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/googleSignInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/captionIv" />
+
     <TextView
         android:id="@+id/captionIv"
+        style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Welcome to APMS"
         android:textSize="24sp"
         android:textStyle="bold"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:layout_below="@+id/iconIv"
-        android:layout_marginTop="25dp"/>
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/apms_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[Atmospheric Pressure Monitoring System]"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/circleImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captionIv"
+        app:layout_constraintVertical_bias="0.196" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In using Google"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/googleSignInButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleSignInButton"
-        android:paddingTop="500dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:paddingTop="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captionIv" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

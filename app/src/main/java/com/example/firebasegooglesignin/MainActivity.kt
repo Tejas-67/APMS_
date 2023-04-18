@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
 import android.widget.Toast
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.example.firebasegooglesignin.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -30,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.apmsDesc.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anim))
+
 
         //animating the text
 //        val a=AnimationUtils.loadAnimation(this, R.anim.anim)
@@ -53,7 +57,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUser() {
-    val firebaseUser = firebaseAuth.currentUser
+        val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser != null){
             startActivity(Intent(this@MainActivity,DashboardActivity::class.java))
             finish()
