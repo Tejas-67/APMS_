@@ -35,11 +35,7 @@ class MainActivity : AppCompatActivity() {
         binding.apmsDesc.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anim))
 
 
-        //animating the text
-//        val a=AnimationUtils.loadAnimation(this, R.anim.anim)
-//        a.reset()
-//        binding.captionIv.clearAnimation()
-//        binding.captionIv.startAnimation(a)
+
 
         val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -48,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
         checkUser()
         binding.googleSignInButton.setOnClickListener {
             Log.d(TAG,"begin signin")

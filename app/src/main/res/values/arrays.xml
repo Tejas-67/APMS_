@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/gassesimg</item>
+        <item>@drawable/statsimage</item>
+        <item>@drawable/profileimg</item>
+        <item>@drawable/infoimg</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/blue_not_blue</item>
+        <item>@color/blue_not_blue</item>
+        <item>@color/blue_not_blue</item>
+        <item>@color/blue_not_blue</item>
+
+    </array>
+</resources>

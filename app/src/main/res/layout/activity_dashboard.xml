@@ -7,6 +7,45 @@
     tools:context=".ProfileActivity"
     android:background="@drawable/common_background">
 
+<!--    <com.ramotion.circlemenu.CircleMenuView-->
+<!--        android:id="@+id/circle_menu"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:button_colors="@array/colors"-->
+<!--        app:button_icons="@array/icons"-->
+<!--        app:distance="90sp"-->
+<!--        app:duration_close="1500"-->
+<!--        app:duration_open="1500"-->
+<!--        app:duration_ring="2000"-->
+<!--        app:icon_close="@drawable/ic_close"-->
+<!--        app:icon_color="#fcfcfc"-->
+
+<!--        app:icon_menu="@drawable/ic_options"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.542" />-->
+
+
+    <com.akki.circlemenu.CircleMenu
+        android:id="@+id/circle_menu"
+        android:layout_width="match_parent"
+        android:layout_height="400sp"
+        app:centerButtonIconColor="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:menu_background_color="@array/colors"
+        app:menu_close_duration="300"
+        app:menu_icons="@array/icons"
+        app:menu_open_duration="400"
+        app:menu_orientation="circle"
+        app:menu_radius="140sp" />
+
     <TextView
         android:id="@+id/heading"
         android:layout_width="wrap_content"
@@ -16,102 +55,105 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/circle_menu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageButton
-        android:id="@+id/levelsImageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/gassesimg"
-        android:layout_marginRight="175dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/heading"
-        app:layout_constraintStart_toStartOf="@+id/heading"
-        app:layout_constraintTop_toBottomOf="@+id/heading" />
+    <!--    <ImageButton-->
+<!--        android:id="@+id/levelsImageButton"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/gassesimg"-->
+<!--        android:layout_marginRight="175dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/heading"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/heading"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/heading" />-->
 
-    <TextView
-        android:id="@+id/levelsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Levels"
-        android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="@+id/levelsImageButton"
-        app:layout_constraintStart_toStartOf="@+id/levelsImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/levelsImageButton" />
+<!--    <TextView-->
+<!--        android:id="@+id/levelsText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Levels"-->
+<!--        android:textColor="@color/cardview_dark_background"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/levelsImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/levelsImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/levelsImageButton" />-->
 
-    <ImageButton
-        android:id="@+id/statsImageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:layout_marginLeft="175dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/statsimage"
-        app:layout_constraintEnd_toEndOf="@+id/heading"
-        app:layout_constraintStart_toStartOf="@+id/heading"
-        app:layout_constraintTop_toBottomOf="@+id/heading" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/statsImageButton"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:layout_marginLeft="175dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:src="@drawable/statsimage"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/heading"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/heading"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/heading" />-->
 
-    <TextView
-        android:id="@+id/statsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Statistics"
-        android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="@+id/statsImageButton"
-        app:layout_constraintStart_toStartOf="@+id/statsImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/statsImageButton" />
+<!--    <TextView-->
+<!--        android:id="@+id/statsText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Statistics"-->
+<!--        android:textColor="@color/cardview_dark_background"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/statsImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/statsImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/statsImageButton" />-->
 
-    <ImageButton
-        android:id="@+id/profileImageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/profileimg"
-        android:layout_marginTop="75dp"
-        app:layout_constraintEnd_toEndOf="@+id/levelsImageButton"
-        app:layout_constraintStart_toStartOf="@+id/levelsImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/levelsImageButton" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/profileImageButton"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/profileimg"-->
+<!--        android:layout_marginTop="75dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/levelsImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/levelsImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/levelsImageButton" />-->
 
-    <TextView
-        android:id="@+id/profileText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Profile"
-        android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="@+id/profileImageButton"
-        app:layout_constraintStart_toStartOf="@+id/profileImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageButton" />
+<!--    <TextView-->
+<!--        android:id="@+id/profileText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Profile"-->
+<!--        android:textColor="@color/cardview_dark_background"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/profileImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/profileImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/profileImageButton" />-->
 
-    <ImageButton
-        android:id="@+id/infoImageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@null"
-        android:scaleType="centerCrop"
-        android:src="@drawable/infoimg"
-        android:layout_marginTop="75dp"
-        app:layout_constraintEnd_toEndOf="@+id/statsImageButton"
-        app:layout_constraintStart_toStartOf="@+id/statsImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/statsImageButton" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/infoImageButton"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@null"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/infoimg"-->
+<!--        android:layout_marginTop="75dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/statsImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/statsImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/statsImageButton" />-->
 
-    <TextView
-        android:id="@+id/infoText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Information"
-        android:textColor="@color/cardview_dark_background"
-        app:layout_constraintEnd_toEndOf="@+id/infoImageButton"
-        app:layout_constraintStart_toStartOf="@+id/infoImageButton"
-        app:layout_constraintTop_toBottomOf="@+id/infoImageButton" />
+<!--    <TextView-->
+<!--        android:id="@+id/infoText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="Information"-->
+<!--        android:textColor="@color/cardview_dark_background"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/infoImageButton"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/infoImageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/infoImageButton" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

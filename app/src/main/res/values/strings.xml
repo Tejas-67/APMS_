@@ -5,6 +5,7 @@
     <string name="id">ID:</string>
     <string name="name">Name: </string>
     <string name="email_address">Email: </string>
+
     <string name="sign_out">Sign out</string>
     <string name="title_activity_read_data">ReadData</string>
     <string name="prompt_email">Email</string>

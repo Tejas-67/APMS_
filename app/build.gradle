@@ -48,6 +48,12 @@ dependencies {
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
 
+    //circular menu bar
+    implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
+    implementation 'com.github.imangazalievm:circlemenu:3.0.0'
+    implementation 'com.github.alokverma:circle-menu:1.2'
+
+
     implementation 'com.google.firebase:firebase-database:20.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     testImplementation 'junit:junit:4.13.2'
